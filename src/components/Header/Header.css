@@ -1,0 +1,11 @@
+.lg-btn {
+  width: 140px;
+  height: 40px;
+  font-weight: 500;
+  background-color: rgb(238, 147, 42);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
