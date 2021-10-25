@@ -58,13 +58,8 @@ const Footer = () => {
 
         <div className="col-12  col-sm-6  col-md-4 px-5">
           <h6 className="py-3">FIND US ON</h6>
-          <img
-            src="./images/dc.png"
-            alt=""
-            style={{ height: "100px", width: "200px" }}
-            className="img-fluid"
-          />
-          <div className="py-5">
+
+          <div className="py-3">
             <p>
               <span>
                 <FaFacebookF />{" "}

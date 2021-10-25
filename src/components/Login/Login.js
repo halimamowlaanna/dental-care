@@ -6,7 +6,7 @@ import { FaGoogle } from "react-icons/fa";
 import { signInWithEmailAndPassword } from "@firebase/auth";
 
 const Login = () => {
-  const { auth, signInUsingGoogle } = useAuth();
+  const { setIsLoading, auth, signInUsingGoogle } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,9 +16,11 @@ const Login = () => {
   const redirect_url = location.state?.from || "/home";
   // console.log("came from", location.state?.from);
   const handleGoogleLogin = () => {
-    signInUsingGoogle().then((result) => {
-      history.push(redirect_url);
-    });
+    signInUsingGoogle()
+      .then((result) => {
+        history.push(redirect_url);
+      })
+      .finally(setIsLoading(false));
   };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -73,7 +75,7 @@ const Login = () => {
           <span style={{ paddingRight: "4px" }}>
             <FaGoogle />
           </span>
-          Signin with google
+          Google SignIn
         </button>
       </div>
     </div>

@@ -39,7 +39,7 @@ const Registration = () => {
   };
   return (
     <div className="container" onSubmit={handleRegistration}>
-      <h2 className="pt-5">Create Account</h2>
+      <h2 className="pt-5 text-primary">Create Account</h2>
       <Form className="py-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

@@ -19,7 +19,8 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className="container">
-        <div className="row row-cols-1 row-cols-md-4 g-4 my-5">
+        <h2 className="text-center pt-5 text-primary">Our Services</h2>
+        <div className="row row-cols-1 row-cols-md-4 g-4 my-4">
           {services.map((service) => (
             <Service
               key={service.key}

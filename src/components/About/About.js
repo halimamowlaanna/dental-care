@@ -5,7 +5,7 @@ import Doctor from "./Doctor/Doctor";
 const About = () => {
   const [doctors, setDoctors] = useState([]);
   useEffect(() => {
-    fetch("./doctors.JSON")
+    fetch("./doctors.json")
       .then((res) => res.json())
       .then((data) => setDoctors(data));
   }, []);
@@ -37,7 +37,7 @@ const About = () => {
             }}
           >
             <div className="p-5">
-              <h2 className="text-center py-5">About Us</h2>
+              <h2 className="text-center py-5 text-primary">About Us</h2>
               <p>
                 For over 4 decades, dental patients in University Park, Park
                 Cities and surrounding Dallas areas have trusted restorative and

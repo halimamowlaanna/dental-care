@@ -12,13 +12,16 @@ import initializeAuthentication from "../Firebase/firebase.init";
 initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const signInUsingGoogle = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   const logOut = () => {
+    setIsLoading(true);
     signOut(auth).then(() => {});
     setUser({});
   };
@@ -30,9 +33,10 @@ const useFirebase = () => {
         // User is signed out
         // ...
       }
+      setIsLoading(false);
     });
   }, []);
-  return { auth, user, signInUsingGoogle, logOut };
+  return { isLoading, setIsLoading, auth, user, signInUsingGoogle, logOut };
 };
 
 export default useFirebase;
