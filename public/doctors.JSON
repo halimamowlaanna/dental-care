@@ -1,0 +1,23 @@
+[
+    {
+      "key":1,
+      "Name":"Dr.Frank Higginbottom",
+      "description":"Say “root canal” and most people shudder with imagined pain and apprehension.",
+      "serviceCost":10000,
+      "image":"./images/pic1.jpg"
+    },
+    {
+        "key":2,
+        "Name":"Dr. Richard Derksen",
+        "description":"Crowns and bridges are well known in the dental field even in the common language of the people",
+        "image":"./images/pic2.jpg"
+    },
+    {
+        "key":3,
+        "Name":"Dr. Sloan Hildebrand",
+        "description":" Teeth may appear to be larger plus it usually leads to bone loss",
+        "image":"./images/pic3.jpg"
+    }
+    
+    
+  ]

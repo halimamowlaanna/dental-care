@@ -1,0 +1,10 @@
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.inner {
+  border: 1px solid gray;
+  padding: 20px;
+}

@@ -1,0 +1,12 @@
+.footer {
+  background-color: rgb(6, 57, 134);
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  height: 350px;
+  /* text-align: center; */
+  width: 100%;
+}
+.row-style {
+  height: 280px;
+}

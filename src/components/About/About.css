@@ -1,0 +1,15 @@
+.top-container {
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: space-evenly; */
+}
+.doctors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+  padding: 10px;
+  height: auto;
+  text-align: center;
+  /* border: 2px solid red; */
+}

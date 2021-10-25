@@ -15,7 +15,7 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <div>
-      <Navbar bg="primary" variant={"dark"} expand="lg">
+      <Navbar bg="primary" variant={"dark"} expand="lg" sticky="top">
         <Container fluid>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -45,21 +45,20 @@ const Header = () => {
               <Nav.Link as={NavLink} to={"/services"}>
                 Services
               </Nav.Link>
+              <Nav.Link as={NavLink} to={"/appointment"}>
+                Appointment
+              </Nav.Link>
+              <Nav.Link as={NavLink} to={"/faq"}>
+                FAQ
+              </Nav.Link>
               <Nav.Link as={NavLink} to={"/registration"}>
                 Registration
               </Nav.Link>
-
-              <NavDropdown title="Faculty" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">CSE</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">EEE</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">More</NavDropdown.Item>
-              </NavDropdown>
             </Nav>
             <span
               style={{ color: "white", fontWeight: 400, paddingRight: "5px" }}
             >
-              {user.displayName}
+              {user.displayName || user.email}
             </span>
             <Form className="d-flex">
               <FormControl
